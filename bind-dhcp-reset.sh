@@ -201,7 +201,7 @@ fi
 # Dynamic DNS is only used within Bind-Internal
 # Unfreeze Bind-Internal
 rndc "$PUBLIC_RNDC_OPT" -c "$PUBLIC_RNDC_CONF" sync -clean
-rndc "$PUBLIC_RNDC_OPT" -c "$PUBLIC_RNDC_CONF" sign "$PUBLIC_DOMAIN_FQDN" red
+rndc "$PUBLIC_RNDC_OPT" -c "$PUBLIC_RNDC_CONF" sign "$PUBLIC_DOMAIN_FQDN" in red
 rndc "$PUBLIC_RNDC_OPT" -c "$PUBLIC_RNDC_CONF" sign "$PUBLIC_DOMAIN_FQDN"
 rndc "$PUBLIC_RNDC_OPT" -c "$PUBLIC_RNDC_CONF" notify "$PUBLIC_DOMAIN_FQDN"
 rndc "$INTERNAL_RNDC_OPT" -c "$PUBLIC_RNDC_CONF" freeze "$INTERNAL_DOMAIN_FQDN" IN "$INTERNAL_VIEWED_DYNAMIC_ZONE"
