@@ -235,10 +235,7 @@ fi
 # check the DHCP files using 'named-checkconf'
 # Check namedconf
 check_conf "$PUBLIC_NAMED_CONF"
-
-NAMED_CONF="/etc/bind/named-internal.conf"
 check_conf "$INTERNAL_NAMED_CONF"
-
 
 # these series of 'rm' is needed until BIND 9.12+
 rm /var/cache/bind/*.jbk
